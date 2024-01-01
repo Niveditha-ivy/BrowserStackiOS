@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1594C899-ADE9-4853-BF50-FA4D3C16F835"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGConnectionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1267"
+            endingLineNumber = "1267"
+            landmarkName = "-addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - f97a2413d24fa0ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BrowserStack%20TCP%20Proxy%20Demo%203/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1266"
+                  endingLineNumber = "1266"
+                  offsetFromSymbolStart = "860">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - f97a2413d24fa0ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BrowserStack%20TCP%20Proxy%20Demo%203/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1266"
+                  endingLineNumber = "1266"
+                  offsetFromSymbolStart = "788">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - f97a2413d24fa0ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BrowserStack%20TCP%20Proxy%20Demo%203/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1266"
+                  endingLineNumber = "1266"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - f97a2413d24fa0ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BrowserStack%20TCP%20Proxy%20Demo%203/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1266"
+                  endingLineNumber = "1266"
+                  offsetFromSymbolStart = "836">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - 50e0f375ac69d06c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1267"
+                  endingLineNumber = "1267"
+                  offsetFromSymbolStart = "904">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - 50e0f375ac69d08d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1266"
+                  endingLineNumber = "1266"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - 50e0f375ac69d06c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1267"
+                  endingLineNumber = "1267"
+                  offsetFromSymbolStart = "924">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - 50e0f375ac69d06c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1267"
+                  endingLineNumber = "1267"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "A3A2D033-3E8B-4A0F-9A4E-8EC45AEB0889 - 50e0f375ac69d06c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1267"
+                  endingLineNumber = "1267"
+                  offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1EA323F0-4507-4CE2-A515-5354EF6D1816"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGSocket.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "-stream:handleEvent:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C191829C-1BC8-439E-9A09-3F3CB5521C6E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGConnectionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1223"
+            endingLineNumber = "1223"
+            landmarkName = "-addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C191829C-1BC8-439E-9A09-3F3CB5521C6E - 50e0f375ac69d638"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1223"
+                  endingLineNumber = "1223"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "C191829C-1BC8-439E-9A09-3F3CB5521C6E - 50e0f375ac69d730"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[PGMobConnectionManager addPeer:forDomain:inputStream:outputStream:proxyHost:proxyPort:]"
+                  moduleName = "BrowserStack TCP Proxy Demo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/janga.niveditha/Downloads/BSDemo_20Dec/BrowserStack%20TCP%20Proxy%20Demo/ConnectionManager/PGConnectionManager.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1231"
+                  endingLineNumber = "1231"
+                  offsetFromSymbolStart = "180">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C82CFDF0-B7DC-4C11-BE01-78010FD6144E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGSocket.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "441"
+            endingLineNumber = "441"
+            landmarkName = "-dealloc"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "96954E20-C5F7-4E8E-906E-67F7A1FEA2D9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGConnectionManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1124"
+            endingLineNumber = "1124"
+            landmarkName = "-dealloc"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3678A87E-DFF5-47F8-9D88-591D9B01F284"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGMessageSenderReceiver.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-convertMessageToByteStream:receiverID:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB2762E3-A32B-4C1F-8BCD-FC43FE5F4393"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/MessageBaseClasses.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-write:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "D750F80C-FC69-4E47-93B2-60C9DA33F13D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBEDB7BD-27FF-42D0-B941-6D7B94AE5AE6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BrowserStack TCP Proxy Demo/ConnectionManager/PGSocket.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "-stream:handleEvent:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

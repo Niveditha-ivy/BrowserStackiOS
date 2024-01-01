@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0208EBD32A6EC1B8004D1261 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0208EBD22A6EC1B8004D1261 /* AppDelegate.m */; };
+		0208EBD62A6EC1B8004D1261 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0208EBD52A6EC1B8004D1261 /* SceneDelegate.m */; };
+		0208EBD92A6EC1B8004D1261 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0208EBD82A6EC1B8004D1261 /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0208EBDC2A6EC1B8004D1261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0208EBDA2A6EC1B8004D1261 /* Main.storyboard */; };
+		0208EBDE2A6EC1B9004D1261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0208EBDD2A6EC1B9004D1261 /* Assets.xcassets */; };
+		0208EBE12A6EC1B9004D1261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0208EBDF2A6EC1B9004D1261 /* LaunchScreen.storyboard */; };
+		0208EBE42A6EC1B9004D1261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0208EBE32A6EC1B9004D1261 /* main.m */; };
+		A1365BBB2B32AC7A00A2B2ED /* PGByteArrayReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BB32B32AC7900A2B2ED /* PGByteArrayReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1365BBC2B32AC7A00A2B2ED /* MessageBaseClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BB52B32AC7900A2B2ED /* MessageBaseClasses.m */; };
+		A1365BBD2B32AC7A00A2B2ED /* PGMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BB62B32AC7A00A2B2ED /* PGMessageFrame.m */; };
+		A1365BBE2B32AC7A00A2B2ED /* PGByteArrayWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BBA2B32AC7A00A2B2ED /* PGByteArrayWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1365BC42B32BC9500A2B2ED /* PGConnectionManagerAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BC22B32BC9400A2B2ED /* PGConnectionManagerAccessor.m */; };
+		A1365BC82B32BD8A00A2B2ED /* PGMessageFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BC62B32BD8A00A2B2ED /* PGMessageFactory.m */; };
+		A1365BCB2B32C08100A2B2ED /* PGSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BCA2B32C08100A2B2ED /* PGSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1365BCD2B32C0C200A2B2ED /* PGConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1365BCC2B32C0C200A2B2ED /* PGConnectionManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A16DA6F12B32EABD0031F7E3 /* CommonMessages.m in Sources */ = {isa = PBXBuildFile; fileRef = A16DA6F02B32EABD0031F7E3 /* CommonMessages.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A16DA6F42B32EE060031F7E3 /* PGPrivilegedMessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A16DA6F22B32EE060031F7E3 /* PGPrivilegedMessageManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A16DA6F92B32EEBA0031F7E3 /* PGTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = A16DA6F52B32EEBA0031F7E3 /* PGTimer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A16DA6FA2B32EEBA0031F7E3 /* PGTimeZoneConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A16DA6F72B32EEBA0031F7E3 /* PGTimeZoneConfig.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1D299AB2B32CA5000E52D94 /* PGConnectivityController_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D299A92B32CA5000E52D94 /* PGConnectivityController_iOS.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A1D299AE2B32CEAA00E52D94 /* PGMessageSenderReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = A1D299AC2B32CEAA00E52D94 /* PGMessageSenderReceiver.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0208EBCE2A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BrowserStack TCP Proxy Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0208EBD12A6EC1B8004D1261 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0208EBD22A6EC1B8004D1261 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0208EBD42A6EC1B8004D1261 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		0208EBD52A6EC1B8004D1261 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		0208EBD72A6EC1B8004D1261 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0208EBD82A6EC1B8004D1261 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0208EBDB2A6EC1B8004D1261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0208EBDD2A6EC1B9004D1261 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0208EBE02A6EC1B9004D1261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0208EBE22A6EC1B9004D1261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0208EBE32A6EC1B9004D1261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1365BB32B32AC7900A2B2ED /* PGByteArrayReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGByteArrayReader.m; sourceTree = "<group>"; };
+		A1365BB42B32AC7900A2B2ED /* MessageBaseClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageBaseClasses.h; sourceTree = "<group>"; };
+		A1365BB52B32AC7900A2B2ED /* MessageBaseClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageBaseClasses.m; sourceTree = "<group>"; };
+		A1365BB62B32AC7A00A2B2ED /* PGMessageFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMessageFrame.m; sourceTree = "<group>"; };
+		A1365BB72B32AC7A00A2B2ED /* PGMessageFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMessageFrame.h; sourceTree = "<group>"; };
+		A1365BB82B32AC7A00A2B2ED /* PGByteArrayReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGByteArrayReader.h; sourceTree = "<group>"; };
+		A1365BB92B32AC7A00A2B2ED /* PGByteArrayWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGByteArrayWriter.h; sourceTree = "<group>"; };
+		A1365BBA2B32AC7A00A2B2ED /* PGByteArrayWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGByteArrayWriter.m; sourceTree = "<group>"; };
+		A1365BBF2B32AEED00A2B2ED /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A1365BC12B32B82000A2B2ED /* PGConnectionManagerProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGConnectionManagerProtocols.h; sourceTree = "<group>"; };
+		A1365BC22B32BC9400A2B2ED /* PGConnectionManagerAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGConnectionManagerAccessor.m; sourceTree = "<group>"; };
+		A1365BC32B32BC9400A2B2ED /* PGConnectionManagerAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGConnectionManagerAccessor.h; sourceTree = "<group>"; };
+		A1365BC62B32BD8A00A2B2ED /* PGMessageFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMessageFactory.m; sourceTree = "<group>"; };
+		A1365BC72B32BD8A00A2B2ED /* PGMessageFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMessageFactory.h; sourceTree = "<group>"; };
+		A1365BCA2B32C08100A2B2ED /* PGSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGSocket.m; sourceTree = "<group>"; };
+		A1365BCC2B32C0C200A2B2ED /* PGConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGConnectionManager.m; sourceTree = "<group>"; };
+		A1365BCE2B32C0F200A2B2ED /* PGConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGConnectionManager.h; sourceTree = "<group>"; };
+		A16DA6EE2B32D0A50031F7E3 /* PGSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGSocket.h; sourceTree = "<group>"; };
+		A16DA6EF2B32EABD0031F7E3 /* CommonMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMessages.h; sourceTree = "<group>"; };
+		A16DA6F02B32EABD0031F7E3 /* CommonMessages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonMessages.m; sourceTree = "<group>"; };
+		A16DA6F22B32EE060031F7E3 /* PGPrivilegedMessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPrivilegedMessageManager.m; sourceTree = "<group>"; };
+		A16DA6F32B32EE060031F7E3 /* PGPrivilegedMessageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPrivilegedMessageManager.h; sourceTree = "<group>"; };
+		A16DA6F52B32EEBA0031F7E3 /* PGTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGTimer.m; sourceTree = "<group>"; };
+		A16DA6F62B32EEBA0031F7E3 /* PGTimeZoneConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGTimeZoneConfig.h; sourceTree = "<group>"; };
+		A16DA6F72B32EEBA0031F7E3 /* PGTimeZoneConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGTimeZoneConfig.m; sourceTree = "<group>"; };
+		A16DA6F82B32EEBA0031F7E3 /* PGTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGTimer.h; sourceTree = "<group>"; };
+		A1D299A92B32CA5000E52D94 /* PGConnectivityController_iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGConnectivityController_iOS.m; sourceTree = "<group>"; };
+		A1D299AA2B32CA5000E52D94 /* PGConnectivityController_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGConnectivityController_iOS.h; sourceTree = "<group>"; };
+		A1D299AC2B32CEAA00E52D94 /* PGMessageSenderReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGMessageSenderReceiver.m; sourceTree = "<group>"; };
+		A1D299AD2B32CEAA00E52D94 /* PGMessageSenderReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGMessageSenderReceiver.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0208EBCB2A6EC1B8004D1261 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0208EBC52A6EC1B8004D1261 = {
+			isa = PBXGroup;
+			children = (
+				0208EBD02A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo */,
+				0208EBCF2A6EC1B8004D1261 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0208EBCF2A6EC1B8004D1261 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0208EBCE2A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0208EBD02A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo */ = {
+			isa = PBXGroup;
+			children = (
+				A1365BC52B32BCEF00A2B2ED /* ConnectionManager */,
+				0208EBD12A6EC1B8004D1261 /* AppDelegate.h */,
+				0208EBD22A6EC1B8004D1261 /* AppDelegate.m */,
+				0208EBD42A6EC1B8004D1261 /* SceneDelegate.h */,
+				0208EBD52A6EC1B8004D1261 /* SceneDelegate.m */,
+				0208EBD72A6EC1B8004D1261 /* ViewController.h */,
+				0208EBD82A6EC1B8004D1261 /* ViewController.m */,
+				A1365BBF2B32AEED00A2B2ED /* Constants.h */,
+				0208EBDA2A6EC1B8004D1261 /* Main.storyboard */,
+				0208EBDD2A6EC1B9004D1261 /* Assets.xcassets */,
+				0208EBDF2A6EC1B9004D1261 /* LaunchScreen.storyboard */,
+				0208EBE22A6EC1B9004D1261 /* Info.plist */,
+				0208EBE32A6EC1B9004D1261 /* main.m */,
+			);
+			path = "BrowserStack TCP Proxy Demo";
+			sourceTree = "<group>";
+		};
+		A1365BC52B32BCEF00A2B2ED /* ConnectionManager */ = {
+			isa = PBXGroup;
+			children = (
+				A16DA6F32B32EE060031F7E3 /* PGPrivilegedMessageManager.h */,
+				A16DA6F22B32EE060031F7E3 /* PGPrivilegedMessageManager.m */,
+				A16DA6EF2B32EABD0031F7E3 /* CommonMessages.h */,
+				A16DA6F02B32EABD0031F7E3 /* CommonMessages.m */,
+				A1D299AA2B32CA5000E52D94 /* PGConnectivityController_iOS.h */,
+				A1D299A92B32CA5000E52D94 /* PGConnectivityController_iOS.m */,
+				A1365BCE2B32C0F200A2B2ED /* PGConnectionManager.h */,
+				A1365BCC2B32C0C200A2B2ED /* PGConnectionManager.m */,
+				A16DA6EE2B32D0A50031F7E3 /* PGSocket.h */,
+				A1365BCA2B32C08100A2B2ED /* PGSocket.m */,
+				A1365BC72B32BD8A00A2B2ED /* PGMessageFactory.h */,
+				A1365BC62B32BD8A00A2B2ED /* PGMessageFactory.m */,
+				A1365BB42B32AC7900A2B2ED /* MessageBaseClasses.h */,
+				A1365BB52B32AC7900A2B2ED /* MessageBaseClasses.m */,
+				A1365BB82B32AC7A00A2B2ED /* PGByteArrayReader.h */,
+				A1365BB32B32AC7900A2B2ED /* PGByteArrayReader.m */,
+				A1365BB92B32AC7A00A2B2ED /* PGByteArrayWriter.h */,
+				A1365BBA2B32AC7A00A2B2ED /* PGByteArrayWriter.m */,
+				A1365BB72B32AC7A00A2B2ED /* PGMessageFrame.h */,
+				A1365BB62B32AC7A00A2B2ED /* PGMessageFrame.m */,
+				A16DA6F82B32EEBA0031F7E3 /* PGTimer.h */,
+				A16DA6F52B32EEBA0031F7E3 /* PGTimer.m */,
+				A16DA6F62B32EEBA0031F7E3 /* PGTimeZoneConfig.h */,
+				A16DA6F72B32EEBA0031F7E3 /* PGTimeZoneConfig.m */,
+				A1365BC32B32BC9400A2B2ED /* PGConnectionManagerAccessor.h */,
+				A1365BC22B32BC9400A2B2ED /* PGConnectionManagerAccessor.m */,
+				A1365BC12B32B82000A2B2ED /* PGConnectionManagerProtocols.h */,
+				A1D299AD2B32CEAA00E52D94 /* PGMessageSenderReceiver.h */,
+				A1D299AC2B32CEAA00E52D94 /* PGMessageSenderReceiver.m */,
+			);
+			path = ConnectionManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0208EBCD2A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0208EBE72A6EC1B9004D1261 /* Build configuration list for PBXNativeTarget "BrowserStack TCP Proxy Demo" */;
+			buildPhases = (
+				0208EBCA2A6EC1B8004D1261 /* Sources */,
+				0208EBCB2A6EC1B8004D1261 /* Frameworks */,
+				0208EBCC2A6EC1B8004D1261 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BrowserStack TCP Proxy Demo";
+			productName = "BrowserStack TCP Proxy Demo";
+			productReference = 0208EBCE2A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0208EBC62A6EC1B8004D1261 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					0208EBCD2A6EC1B8004D1261 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 0208EBC92A6EC1B8004D1261 /* Build configuration list for PBXProject "BrowserStack TCP Proxy Demo" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0208EBC52A6EC1B8004D1261;
+			productRefGroup = 0208EBCF2A6EC1B8004D1261 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0208EBCD2A6EC1B8004D1261 /* BrowserStack TCP Proxy Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0208EBCC2A6EC1B8004D1261 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0208EBE12A6EC1B9004D1261 /* LaunchScreen.storyboard in Resources */,
+				0208EBDE2A6EC1B9004D1261 /* Assets.xcassets in Resources */,
+				0208EBDC2A6EC1B8004D1261 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0208EBCA2A6EC1B8004D1261 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0208EBD92A6EC1B8004D1261 /* ViewController.m in Sources */,
+				0208EBD32A6EC1B8004D1261 /* AppDelegate.m in Sources */,
+				A1D299AE2B32CEAA00E52D94 /* PGMessageSenderReceiver.m in Sources */,
+				A16DA6F92B32EEBA0031F7E3 /* PGTimer.m in Sources */,
+				A16DA6F12B32EABD0031F7E3 /* CommonMessages.m in Sources */,
+				A1365BCD2B32C0C200A2B2ED /* PGConnectionManager.m in Sources */,
+				A1365BBB2B32AC7A00A2B2ED /* PGByteArrayReader.m in Sources */,
+				A16DA6FA2B32EEBA0031F7E3 /* PGTimeZoneConfig.m in Sources */,
+				A1365BCB2B32C08100A2B2ED /* PGSocket.m in Sources */,
+				A1365BBC2B32AC7A00A2B2ED /* MessageBaseClasses.m in Sources */,
+				0208EBE42A6EC1B9004D1261 /* main.m in Sources */,
+				A16DA6F42B32EE060031F7E3 /* PGPrivilegedMessageManager.m in Sources */,
+				A1365BC82B32BD8A00A2B2ED /* PGMessageFactory.m in Sources */,
+				A1365BBE2B32AC7A00A2B2ED /* PGByteArrayWriter.m in Sources */,
+				A1D299AB2B32CA5000E52D94 /* PGConnectivityController_iOS.m in Sources */,
+				A1365BBD2B32AC7A00A2B2ED /* PGMessageFrame.m in Sources */,
+				A1365BC42B32BC9500A2B2ED /* PGConnectionManagerAccessor.m in Sources */,
+				0208EBD62A6EC1B8004D1261 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0208EBDA2A6EC1B8004D1261 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0208EBDB2A6EC1B8004D1261 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0208EBDF2A6EC1B9004D1261 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0208EBE02A6EC1B9004D1261 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0208EBE52A6EC1B9004D1261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0208EBE62A6EC1B9004D1261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0208EBE82A6EC1B9004D1261 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YRRKG63BYD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BrowserStack TCP Proxy Demo/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivycomptech.browerstack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0208EBE92A6EC1B9004D1261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YRRKG63BYD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BrowserStack TCP Proxy Demo/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivycomptech.browerstack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0208EBC92A6EC1B8004D1261 /* Build configuration list for PBXProject "BrowserStack TCP Proxy Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0208EBE52A6EC1B9004D1261 /* Debug */,
+				0208EBE62A6EC1B9004D1261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0208EBE72A6EC1B9004D1261 /* Build configuration list for PBXNativeTarget "BrowserStack TCP Proxy Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0208EBE82A6EC1B9004D1261 /* Debug */,
+				0208EBE92A6EC1B9004D1261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0208EBC62A6EC1B8004D1261 /* Project object */;
+}
