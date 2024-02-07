@@ -110,6 +110,7 @@
     [self log:@"BrowserStackLog : Creating Socket"];
     
     // Create the socket streams
+    // Streams are connected to proxy here
     [NSStream getStreamsToHostWithName:proxyHost port:proxyPort inputStream:&(inputStream) outputStream:&(outputStream)];
     
     if (inputStream && outputStream) {
@@ -120,11 +121,17 @@
         [inputStream retain];
         [outputStream retain];
         [self log:@"BrowserStackLog : Opened Streams"];
-        //        [inputStream setDelegate:self];
-        //        [outputStream setDelegate:self];
         
         // Now, call the method to send the actual HTTP request
-        [self sendHTTPRequestWithInputStream:inputStream outputStream:outputStream host:host port:port];
+        [self connectStreamsToHostViaProxy:inputStream outputStream:outputStream host:host port:port];
+        
+        // !! inputStream is closed above
+        // outputStream is still open
+        //
+        // No need to use proxyHost and proxyPort vars now, inputStream and outputStream are connected to PG server via proxy
+        // The Streams are connected to proxy now.
+        // Use outputStream to send HTTP request
+        // Use inputStream to recieve response
         [self createPokerServerSocket:proxyHost proxyPort:proxyPort];
         
     } else {
@@ -133,7 +140,7 @@
 }
 
 
-- (void)sendHTTPRequestWithInputStream:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream host:(NSString *)host port:(UInt32)port {
+- (void)connectStreamsToHostViaProxy:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream host:(NSString *)host port:(UInt32)port {
     [self log:@"BrowserStackLog : Requesting / on the host\n"];
     
     // You can change the URL here...
@@ -261,6 +268,9 @@
 -(void)createPokerServerSocket:(NSString *)proxyHost proxyPort:(UInt32)proxyPort {
     
     PGConnectivityController_iOS* connectionBootstrapper = [PGConnectivityController_iOS sharedInstance];
+    
+    // inputStream and outputStream are opened earlier in createSocketwithProxyHost
+    // no need to pass proxyHost and proxyHost, stream is already connected
     [connectionBootstrapper initiateConnection:@"real.partygaming.com.e7new.com" inputStream:inputStream outputStream:outputStream proxyHost:proxyHost proxyPort:proxyPort];
 }
 

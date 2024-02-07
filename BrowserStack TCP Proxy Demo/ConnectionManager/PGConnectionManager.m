@@ -1275,6 +1275,7 @@ static PGMobConnectionManager *sManager = nil;
 	{
 		//Initiate reconnection subroutine in case socket has not been created successfully. 
 		//e.g. No internet connection or no network connectivity to game servers.
+        NSLog(@"BrowserStackLog : Unable to create New Socket created");
 		[self socketDisconnected:socket];
     } else {
 //        NSString *logMessage = [NSString stringWithFormat:@"BrowserStackLog : New Socket created"];

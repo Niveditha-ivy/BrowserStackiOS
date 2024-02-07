@@ -320,6 +320,7 @@ static int sSocketUniqueID = 1;
 
 #pragma mark NSStream Delegate implementation
 
+// both input and output streams will trigger these.
 - (void)stream:(NSStream *)stream handleEvent:(NSStreamEvent)eventCode{
     NSLog(@"BrowserStackLog : stream NSStream Delegate implementation \n");
     switch(eventCode) 
@@ -451,12 +452,19 @@ static int sSocketUniqueID = 1;
 	[super dealloc];
 }
 
+// Creating socket here with proxy
+// inputStream are shared with ViewController
 -(BOOL) connect:(NSInputStream* ) inputStream
    outputStream:(NSOutputStream* ) outputStream proxyHost:(NSString* ) proxyHost
       proxyPort:(NSUInteger) proxyPort {
     
+    // Why are these defined again ?
+    // They are already set in ViewController
+    // We can assume inputStream and outputStream are connected to this.
     NSString *mServerIP = @"real.partygaming.com.e7new.com";
     NSString *mServerPort = @"2147";
+    
+    
     NSLog(@"BrowserStackLog : In Connect Method with ServerIP - %@ and ServerPort - %@", mServerIP, mServerPort);
     
     
@@ -468,12 +476,17 @@ static int sSocketUniqueID = 1;
     }
     
     // Release previous streams (balance the refCount)
+    // why is this needed
     [mInputStream release];
     [mOutputStream release];
 //    Create App Socket
+    
+    // inputStream and outputStream variables should be used
+    // no need to create separate socket.
     CFStreamCreatePairWithSocketToCFHost(NULL, host, 2147, (CFReadStreamRef *)&mInputStream, (CFWriteStreamRef*)&mOutputStream);
     
     CFRelease(host);
+    
     // Streams failed to initialize
     if (mInputStream == nil || mOutputStream == nil) {
         NSLog(@"Socket Connect error: Streams failed to initialize");
