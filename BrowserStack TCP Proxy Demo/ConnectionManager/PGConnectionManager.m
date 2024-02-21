@@ -1204,10 +1204,8 @@ static PGMobConnectionManager *sManager = nil;
 
 -(void) addPeer:(int) peerID
       forDomain:(int) domainID
-    inputStream:(NSInputStream* ) inputStream
-   outputStream:(NSOutputStream* ) outputStream
-   proxyHost:(NSString* ) proxyHost
-   proxyPort:(NSUInteger) proxyPort{
+      proxyHost:(NSString* ) proxyHost
+      proxyPort:(NSUInteger) proxyPort {
 	
 	//Check if a socket already exist for the peer in the map of peerId to socket
 	//if it exists then don't add it to the map other wise add it.
@@ -1260,11 +1258,11 @@ static PGMobConnectionManager *sManager = nil;
 //    socket = [[PGMobSocket alloc] init];
 	[socket setDomainID:domainID];
 	
-	[socket setServerIP:@"real.partygaming.com.e7new.com"];
+	[socket setServerIP:@"www.example.org"];
     NSString *portString = [self getDomainPort:domainID];
-	[socket setServerPort:portString];
+	[socket setServerPort:@"80"];
     [socket setDelegate:self];
-    BOOL success = [socket connect:inputStream outputStream:outputStream proxyHost:proxyHost proxyPort:proxyPort];
+    BOOL success = [socket connect:proxyHost proxyPort:proxyPort];
 
 	//Add new socket to the map
 	[mPeerIDToSocketMap setObject:socket forKey:[NSNumber numberWithInt:peerID]];

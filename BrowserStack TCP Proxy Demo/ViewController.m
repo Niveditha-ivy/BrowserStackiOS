@@ -91,10 +91,11 @@
             [self log:proxyPortString];
             
             // UPDATE THIS to POKER URL
-            NSString *host = @"real.partygaming.com.e7new.com";
-            UInt32 port = 2147;
+            NSString *host = @"www.example.org";
+            UInt32 port = 80;
             
-            [self createSocketWithProxyHost:host port:port proxyHost:proxyHost proxyPort:proxyPort];
+            [self createPokerServerSocketViaProxy:host port:port proxyHost:proxyHost proxyPort:proxyPort];
+            
             [self log:@"\n---- FINISHED --- \n"];
             
         } else {
@@ -103,11 +104,29 @@
     }];
 }
 
-- (void)createSocketWithProxyHost:(NSString *)host port:(UInt32)port proxyHost:(NSString *)proxyHost proxyPort:(UInt32)proxyPort {
+- (void)createPokerServerSocketViaProxy:(NSString *)pokerHost port:(UInt32)pokerPort proxyHost:(NSString *)proxyHost proxyPort:(UInt32)proxyPort {
     //    NSInputStream *inputStream = nil;
     //    NSOutputStream *outputStream = nil;
     //
     [self log:@"BrowserStackLog : Creating Socket"];
+        [self log:@"BrowserStackLog : Opened Streams"];
+        
+        // Now, call the method to send the actual HTTP request
+        BOOL privoxy_tunnel_established = [self configurePrivoxyToConnectToPokerServers:pokerHost port:pokerPort proxyHost:proxyHost proxyPort:proxyPort];
+        
+        if (privoxy_tunnel_established) {
+            [self log:@"BrowserStackLog : Creating poker server socket"];
+            [self createPokerServerSocket:proxyHost proxyPort:proxyPort];
+        } else {
+            [self log:@"BrowserStackLog : Cannot proceed, no tunnel established"];
+        }
+}
+
+
+// Returns if connection was established or not
+- (BOOL)configurePrivoxyToConnectToPokerServers:(NSString *)pokerHost port:(UInt32)pokerPort proxyHost:(NSString *)proxyHost proxyPort:(UInt32)proxyPort {
+    NSInputStream *inputStream ;
+    NSOutputStream *outputStream;
     
     // Create the socket streams
     // Streams are connected to proxy here
@@ -117,67 +136,57 @@
         // Open the streams
         [inputStream open];
         [outputStream open];
-        //Check if it is a hold issue
-        [inputStream retain];
-        [outputStream retain];
-        [self log:@"BrowserStackLog : Opened Streams"];
         
-        // Now, call the method to send the actual HTTP request
-        [self connectStreamsToHostViaProxy:inputStream outputStream:outputStream host:host port:port];
         
-        // !! inputStream is closed above
-        // outputStream is still open
-        //
-        // No need to use proxyHost and proxyPort vars now, inputStream and outputStream are connected to PG server via proxy
-        // The Streams are connected to proxy now.
-        // Use outputStream to send HTTP request
-        // Use inputStream to recieve response
-        [self createPokerServerSocket:proxyHost proxyPort:proxyPort];
         
-    } else {
-        [self log:@"BrowserStackLog : Failed to create socket"];
-    }
-}
-
-
-- (void)connectStreamsToHostViaProxy:(NSInputStream *)inputStream outputStream:(NSOutputStream *)outputStream host:(NSString *)host port:(UInt32)port {
-    [self log:@"BrowserStackLog : Requesting / on the host\n"];
-    
-    // You can change the URL here...
-    NSString *httpRequest = [NSString stringWithFormat:@"CONNECT %@:%u HTTP/1.1\n\n", host, port];
-    [self log:@"BrowserStackLog : HTTP Request: \n"];
-    [self log:httpRequest];
-    NSData *httpRequestData = [httpRequest dataUsingEncoding:NSUTF8StringEncoding];
-    
-    // Write the HTTP request to the output stream
-    NSInteger bytesWritten = [outputStream write:[httpRequestData bytes] maxLength:[httpRequestData length]];
-    
-    if (bytesWritten == -1) {
-        // Error handling
-        [self log:@"BrowserStackLog : Failed to send HTTP request\n"];
-    } else {
-        // Read the HTTP response
-        NSMutableData *httpResponseData = [NSMutableData data];
-        uint8_t buffer[1024];
-        NSInteger bytesRead = 0;
+        [self log:@"BrowserStackLog : Requesting / on the host\n"];
         
-        [inputStream open];
+        // You can change the URL here...
+        NSString *httpRequest = [NSString stringWithFormat:@"CONNECT %@:%u HTTP/1.1\n\n", pokerHost, pokerPort];
+        [self log:@"BrowserStackLog : Configuring Privoxy: \n"];
+        [self log:httpRequest];
+        NSData *httpRequestData = [httpRequest dataUsingEncoding:NSUTF8StringEncoding];
         
-        do {
-            bytesRead = [inputStream read:buffer maxLength:sizeof(buffer)];
+        // Write the HTTP request to the output stream
+        NSInteger bytesWritten = [outputStream write:[httpRequestData bytes] maxLength:[httpRequestData length]];
+        
+        if (bytesWritten == -1) {
+            // Error handling
+            [self log:@"BrowserStackLog : Failed to send HTTP request\n"];
+            return false;
+        } else {
+            // Read the HTTP response
+            NSMutableData *httpResponseData = [NSMutableData data];
+            uint8_t buffer[1024];
+            NSInteger bytesRead = 0;
             
-            if (bytesRead > 0) {
-                [httpResponseData appendBytes:buffer length:bytesRead];
+            [inputStream open];
+            
+            do {
+                bytesRead = [inputStream read:buffer maxLength:sizeof(buffer)];
+                
+                if (bytesRead > 0) {
+                    [httpResponseData appendBytes:buffer length:bytesRead];
+                }
+            } while (bytesRead > 0);
+            
+            [inputStream close];
+            
+            // Convert HTTP response data to NSString for printing
+            NSString *httpResponseString = [[NSString alloc] initWithData:httpResponseData encoding:NSUTF8StringEncoding];
+            [self log:httpResponseString];
+            if ([httpResponseString rangeOfString:@"200 Connection established"].location != NSNotFound) {
+                [self log:@"BrowserStackLog : PrivoxyConfigured Successfully \n"];
+                return true;
+            } else {
+                [self log:@"BrowserStackLog : PrivoxyConfigured Failed \n"];
+                return false;
             }
-        } while (bytesRead > 0);
+        }
         
-        [inputStream close];
-        
-        // Convert HTTP response data to NSString for printing
-        NSString *httpResponseString = [[NSString alloc] initWithData:httpResponseData encoding:NSUTF8StringEncoding];
-        [self log:@"BrowserStackLog : HTTP Response: \n"];
-        [self log:httpResponseString];
     }
+
+    return false;
 }
 
 
@@ -271,7 +280,7 @@
     
     // inputStream and outputStream are opened earlier in createSocketwithProxyHost
     // no need to pass proxyHost and proxyHost, stream is already connected
-    [connectionBootstrapper initiateConnection:@"real.partygaming.com.e7new.com" inputStream:inputStream outputStream:outputStream proxyHost:proxyHost proxyPort:proxyPort];
+    [connectionBootstrapper initiateConnection:@"real.partygaming.com.e7new.com" proxyHost:proxyHost proxyPort:proxyPort];
 }
 
 @end

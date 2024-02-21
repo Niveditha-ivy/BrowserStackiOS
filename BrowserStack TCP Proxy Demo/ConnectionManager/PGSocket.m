@@ -454,21 +454,20 @@ static int sSocketUniqueID = 1;
 
 // Creating socket here with proxy
 // inputStream are shared with ViewController
--(BOOL) connect:(NSInputStream* ) inputStream
-   outputStream:(NSOutputStream* ) outputStream proxyHost:(NSString* ) proxyHost
+-(BOOL) connect:(NSString* ) proxyHost
       proxyPort:(NSUInteger) proxyPort {
     
     // Why are these defined again ?
     // They are already set in ViewController
     // We can assume inputStream and outputStream are connected to this.
-    NSString *mServerIP = @"real.partygaming.com.e7new.com";
-    NSString *mServerPort = @"2147";
-    
+//    NSString *mServerIP = @"www.example.org";
+//    NSString *mServerPort = 80;
+//    
     
     NSLog(@"BrowserStackLog : In Connect Method with ServerIP - %@ and ServerPort - %@", mServerIP, mServerPort);
     
     
-    CFHostRef host = CFHostCreateWithName(NULL, (CFStringRef)mServerIP);
+    CFHostRef host = CFHostCreateWithName(NULL, (CFStringRef)proxyHost);
 
     if (!host) {
         NSLog(@"Unable to resolve the host");
@@ -483,7 +482,7 @@ static int sSocketUniqueID = 1;
     
     // inputStream and outputStream variables should be used
     // no need to create separate socket.
-    CFStreamCreatePairWithSocketToCFHost(NULL, host, 2147, (CFReadStreamRef *)&mInputStream, (CFWriteStreamRef*)&mOutputStream);
+    CFStreamCreatePairWithSocketToCFHost(NULL, host, 8118, (CFReadStreamRef *)&mInputStream, (CFWriteStreamRef*)&mOutputStream);
     
     CFRelease(host);
     

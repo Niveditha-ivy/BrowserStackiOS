@@ -11,11 +11,7 @@
 @class ViewController;
 
 
-@interface ViewController : UIViewController<NSStreamDelegate> {
-    
-    NSInputStream *inputStream ;
-    NSOutputStream *outputStream;
-    
+@interface ViewController : UIViewController<NSStreamDelegate> {    
     NSInputStream    *mInputStream;
     NSOutputStream    *mOutputStream;
 }

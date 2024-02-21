@@ -144,8 +144,6 @@ static int currentCSIndex = 0;
 }
 
 - (void) initiateConnection:(NSString* )serverIP
-                inputStream:(NSInputStream* ) inputStream
-               outputStream:(NSOutputStream* ) outputStream
                proxyHost:(NSString *) proxyHost proxyPort:(NSUInteger) proxyPost
 {
     NSLog(@"BrowserStackLog : In initiateConnection with serverIP - %@", serverIP);
@@ -156,7 +154,8 @@ static int currentCSIndex = 0;
     connectionManager.certificatesValidationEnabled = NO;
 	[connectionManager setDomainURL:mServerIP domain:-1];
     NSLog(@"BrowserStackLog : mServerIP - %@, Calling addPeer method", mServerIP);
-    [connectionManager addPeer:0 forDomain:-1 inputStream:inputStream outputStream:outputStream proxyHost:proxyHost proxyPort:proxyPost];
+
+    [connectionManager addPeer:0 forDomain:-1 proxyHost:proxyHost proxyPort:proxyPost];
 	
 	
 	//Start initial connection timer

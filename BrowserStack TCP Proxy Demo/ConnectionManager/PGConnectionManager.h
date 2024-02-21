@@ -52,8 +52,6 @@
 
 -(void) addPeer:(int) peerID
       forDomain:(int) domainID
-    inputStream:(NSInputStream* ) inputStream
-   outputStream:(NSOutputStream* ) outputStream
    proxyHost:(NSString* ) proxyHost
    proxyPort:(NSUInteger) proxyPort;
 

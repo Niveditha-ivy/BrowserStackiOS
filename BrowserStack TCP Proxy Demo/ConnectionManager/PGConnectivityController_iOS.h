@@ -48,8 +48,6 @@
 /// This method initiates first connection with game server. 
 /// It should not be called for reconnection.
 - (void)initiateConnection:(NSString* )serverIP
-               inputStream:(NSInputStream* ) inputStream
-              outputStream:(NSOutputStream* ) outputStream
               proxyHost:(NSString* ) proxyHost
               proxyPort:(NSUInteger) proxyPost;
 

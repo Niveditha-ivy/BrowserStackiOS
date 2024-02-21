@@ -70,9 +70,7 @@
 @property (nonatomic, retain) NSMutableArray* certificatesList;
 
 ///Initiates SSL connection with pre-specified server IP and Port.
--(BOOL) connect:(NSInputStream* ) inputStream
-   outputStream:(NSOutputStream* ) outputStream
-   proxyHost:(NSString* ) proxyHost
+-(BOOL) proxyHost:(NSString* ) proxyHost
    proxyPort:(NSUInteger) proxyPort;
 ///Disconnects the SSL connection with server
 -(BOOL) disconnect;
