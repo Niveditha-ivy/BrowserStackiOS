@@ -91,8 +91,8 @@
             [self log:proxyPortString];
             
             // UPDATE THIS to POKER URL
-            NSString *host = @"www.example.org";
-            UInt32 port = 80;
+            NSString *host = @"real.partygaming.com.e7new.com";
+            UInt32 port = 2147;
             
             [self createPokerServerSocketViaProxy:host port:port proxyHost:proxyHost proxyPort:proxyPort];
             
