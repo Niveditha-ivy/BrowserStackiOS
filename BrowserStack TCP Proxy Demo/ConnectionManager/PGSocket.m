@@ -482,7 +482,7 @@ static int sSocketUniqueID = 1;
     
     // inputStream and outputStream variables should be used
     // no need to create separate socket.
-    CFStreamCreatePairWithSocketToCFHost(NULL, host, 8118, (CFReadStreamRef *)&mInputStream, (CFWriteStreamRef*)&mOutputStream);
+    CFStreamCreatePairWithSocketToCFHost(NULL, host, (int8_t)proxyPort, (CFReadStreamRef *)&mInputStream, (CFWriteStreamRef*)&mOutputStream);
     
     CFRelease(host);
     
